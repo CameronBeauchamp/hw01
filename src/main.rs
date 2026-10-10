@@ -64,6 +64,7 @@ println!("Total food: {}", total_food);
 println!("Choice: {}", _choice);
 println!("Game started.");
 println!("Good luck!");
+println!("Let's begin!");
 print_status(day, gold, food, roll_count);
 }
 
