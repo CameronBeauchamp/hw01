@@ -39,6 +39,7 @@ fn print_status(day: i32, gold: i32, food: i32, roll_count: i32) {
 }
 fn read_number(min: i32, _max: i32) -> i32 {
     min
+// TODO: read user input
 }
 fn main() {
 let gold = 100;
