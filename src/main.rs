@@ -40,13 +40,18 @@ fn print_status(day: i32, gold: i32, food: i32, roll_count: i32) {
     println!("Food: {}", food);
     println!("Roll Count: {}", roll_count);
 }
-fn read_number(_min: i32, _max: i32) -> i32 {
+fn read_number(min: i32, max: i32) -> i32 {
    
 
 let mut input = String::new();
 std::io::stdin().read_line(&mut input).unwrap();
-let number: i32 = input.trim().parse().unwrap();
-
+let number: i32 = match input.trim().parse() {
+    Ok(n) => n,
+    Err(_) => return min,
+};
+if number < min || number > max {
+    return min;
+}
 return number;
 
 }
