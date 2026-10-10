@@ -20,7 +20,7 @@ fn hunt_food(roll: i32) -> i32 {
     }
 }
 fn roll_die() -> i32 {
-    1
+    rand::random_range(1..=6)
 }
 fn roll_many(count: i32) -> i32 {
     let mut total = 0;
