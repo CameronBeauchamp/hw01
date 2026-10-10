@@ -41,7 +41,11 @@ fn print_status(day: i32, gold: i32, food: i32, roll_count: i32) {
     println!("Roll Count: {}", roll_count);
 }
 fn read_number(min: i32, _max: i32) -> i32 {
-    min
+   return min;
+let mut input = String::new();
+println!("Enter a number:");
+input.clear();
+return min;
 // TODO: read user input
 }
 fn main() {
