@@ -63,6 +63,7 @@ let total_food = food + food_found;
 println!("Total food: {}", total_food);
 println!("Choice: {}", _choice);
 println!("Game started.");
+println!("Good luck!");
 print_status(day, gold, food, roll_count);
 }
 
