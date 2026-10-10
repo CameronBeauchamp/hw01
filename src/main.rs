@@ -62,6 +62,7 @@ println!("Food found: {}", food_found);
 let total_food = food + food_found;
 println!("Total food: {}", total_food);
 println!("Choice: {}", _choice);
+println!("Game started.");
 print_status(day, gold, food, roll_count);
 }
 
