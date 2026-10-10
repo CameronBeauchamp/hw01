@@ -25,9 +25,12 @@ fn roll_die() -> i32 {
 fn roll_many(count: i32) -> i32 {
     let mut total = 0;
 
-    for _ in 0..count {
+// Roll count times
+    
+for _ in 0..count {
         total += roll_die();
     }
+// Return total of all rolls
 
     total
 }
