@@ -24,7 +24,7 @@ fn hunt_food(roll: u64) -> u64 {
     }
 }
 fn roll_die(seed: u64) -> u64 {
-    rand::random_range(1..=6)
+    (seed % 6) + 1
 }
 fn roll_many(seed: u64, count: u64) -> u64 {
     let mut total = 0;
@@ -61,7 +61,7 @@ return number;
 }
 fn main() {
 let mut gold: u64 = START_GOLD;
-let mut seed: u64 = read_number(1, MAX_SEED);
+let seed: u64 = read_number(1, MAX_SEED);
 let mut food: u64 = 0;
 let mut day: u64 = 1;
 let mut roll_count: u64 = 0;   
@@ -71,9 +71,9 @@ let _can_buy = can_afford(gold, FOOD_PRICE);
 let roll: u64 = roll_die(seed);
 let _total_rolls: u64 = roll_many(seed, 1);
 println!("Roll: {}", roll);
-let mut food_found: u64 = hunt_food(roll);
+let food_found: u64 = hunt_food(roll);
 println!("Food found: {}", food_found);
-let mut total_food: u64 = food + food_found;
+let total_food: u64 = food + food_found;
 println!("Total food: {}", total_food);
 println!("Choice: {}", _choice);
 if _choice == 1 {
