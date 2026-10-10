@@ -1,0 +1,8 @@
+print_menu
+read_number
+roll_die
+roll_many
+hunt_food
+can_afford
+print_status
+main
