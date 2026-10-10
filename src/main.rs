@@ -1,3 +1,4 @@
+use rand::{rngs::StdRng, Rng, SeedableRng};
 const START_GOLD: u64 = 100;
 const FOOD_PRICE: u64 = 5;
 const MAX_SEED: u64 = 1000;
@@ -24,7 +25,9 @@ fn hunt_food(roll: u64) -> u64 {
     }
 }
 fn roll_die(seed: u64) -> u64 {
-    (seed % 6) + 1
+    let mut rng = StdRng::seed_from_u64(seed);
+    rng.random_range(1..=6)
+
 }
 fn roll_many(seed: u64, count: u64) -> u64 {
     let mut total = 0;
@@ -71,12 +74,11 @@ let _choice: u64 = read_number(1, 5);
 let _can_buy = can_afford(gold, FOOD_PRICE);
 let roll: u64 = roll_die(seed);
 let _total_rolls: u64 = roll_many(seed, 1);
-println!("Roll: {}", roll);
+
 let food_found: u64 = hunt_food(roll);
-println!("Food found: {}", food_found);
-let total_food: u64 = food + food_found;
-println!("Total food: {}", total_food);
-println!("Choice: {}", _choice);
+
+let _total_food: u64 = food + food_found;
+
 if _choice == 1 {
     food += 1;
     gold -= FOOD_PRICE;
