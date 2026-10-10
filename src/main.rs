@@ -69,6 +69,13 @@ println!("Choice: {}", _choice);
 if _choice == 4 {
     print_status(day, gold, food, roll_count);
 }
+
+if _choice == 5 {
+    println!("Goodbye!");
+
+    
+
+}
 println!("Game started.");
 println!("Good luck!");
 println!("Let's begin!");
