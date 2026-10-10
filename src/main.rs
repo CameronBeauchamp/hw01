@@ -40,12 +40,13 @@ fn print_status(day: i32, gold: i32, food: i32, roll_count: i32) {
     println!("Food: {}", food);
     println!("Roll Count: {}", roll_count);
 }
-fn read_number(min: i32, max: i32) -> i32 {
+fn read_number(_min: i32, _max: i32) -> i32 {
    
 
 let mut input = String::new();
 std::io::stdin().read_line(&mut input).unwrap();
 let number: i32 = input.trim().parse().unwrap();
+
 return number;
 
 }
@@ -56,7 +57,9 @@ let gold = 100;
     let roll_count = 0;   
  print_menu();
 let _choice = read_number(1, 5);
+let _can_buy = can_afford(gold, 10);
 let roll = roll_die();
+let _total_rolls = roll_many(1);
 println!("Roll: {}", roll);
 let food_found = hunt_food(roll);
 println!("Food found: {}", food_found);
