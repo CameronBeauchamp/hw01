@@ -65,6 +65,7 @@ let seed: u64 = read_number(1, MAX_SEED);
 let mut food: u64 = 0;
 let mut day: u64 = 1;
 let mut roll_count: u64 = 0;   
+loop {
  print_menu();
 let _choice: u64 = read_number(1, 5);
 let _can_buy = can_afford(gold, FOOD_PRICE);
@@ -100,16 +101,11 @@ if _choice == 4 {
 
 if _choice == 5 {
     println!("Goodbye!");
-
-
-    
-
+    break;
 }
-println!("Game started.");
-println!("Good luck!");
-println!("Let's begin!");
-println!("Day {}", day);
 
 print_status(day, gold, food, roll_count);
+}
+
 }
 
