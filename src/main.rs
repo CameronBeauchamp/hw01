@@ -55,6 +55,8 @@ let roll = roll_die();
 println!("Roll: {}", roll);
 let food_found = hunt_food(roll);
 println!("Food found: {}", food_found);
+let total_food = food + food_found;
+println!("Total food: {}", total_food);
 println!("Choice: {}", _choice);
 print_status(day, gold, food, roll_count);
 }
