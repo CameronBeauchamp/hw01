@@ -47,6 +47,7 @@ let gold = 100;
     let roll_count = 0;   
  print_menu();
 let _choice = read_number(1, 5);
+println!("Choice: {}", _choice);
 print_status(day, gold, food, roll_count);
 }
 
